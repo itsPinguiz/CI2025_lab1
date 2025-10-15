@@ -46,8 +46,6 @@ As the temperature cools, it settles into increasingly stable, high-value region
 
 ## **Overview of the Simulated Annealing Method**
 
-**Simulated Annealing (SA)** is inspired by the physical process of **annealing** in metallurgy, where a material is heated and slowly cooled to reach a stable, low-energy crystalline state.
-
 At each iteration:
 1. A neighboring (slightly modified) solution is generated via the `tweak()` function.
 2. The new solution’s **value** is computed.
@@ -147,5 +145,6 @@ To avoid unnecessary computation:
 | **Cooling** | Gradual temperature reduction | `temperature_at()` | Balance exploration/exploitation |
 | **Acceptance** | Probabilistic worsening acceptance | `acceptance()` | Allow exploration early on |
 | **Early Stop** | Terminate when stagnation occurs | `optimize()` | Prevent excessive computation |
+
 
 
