@@ -109,12 +109,7 @@ These random changes help escape local optima and maintain diversity.
 
 ### 2. `greedy_edit()`
 Implements a **value-density–based heuristic**:
-1. Computes item densities:
-
-   $$
-   d_i = \frac{v_i}{\|w_i\|_2 + \varepsilon}
-   $$
-   
+1. Computes item densities  $d_i = \frac{v_i}{\|w_i\|_2 + \varepsilon}$
 2. Attempts to insert high-density items into the knapsack where they fit best.
 3. Optimizes transfers between knapsacks to maximize global value.
 
