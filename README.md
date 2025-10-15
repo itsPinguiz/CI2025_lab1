@@ -14,14 +14,14 @@ For this reason, we adopt a **metaheuristic approach** — specifically, **Simul
 
 ### **Problem Space**
 The **problem space** represents all possible configurations of how items can be distributed among the knapsacks (including the option of leaving items unassigned).  
-If there are $ n $ items and $ k $ knapsacks, each item can be in one of $ k + 1 $ states (placed in one of the knapsacks, or not placed at all).  
+If there are $n$ items and $k$ knapsacks, each item can be in one of $k + 1$ states (placed in one of the knapsacks, or not placed at all).  
 Thus, the total number of possible configurations is roughly:
 
 $$
 (k + 1)^n
 $$
 
-This enormous combinatorial space makes exhaustive search impossible for large $ n $, since even small increases in problem size cause an exponential explosion in possibilities.
+This enormous combinatorial space makes exhaustive search impossible for large $n$, since even small increases in problem size cause an exponential explosion in possibilities.
 
 ---
 
@@ -62,10 +62,10 @@ e^{\Delta / T}, & \text{if } \Delta \leq 0
 $$
 
 where:
-- $ \Delta $ = change in total value (new − current),
-- $ T $ = current temperature.
+- $\Delta$ = change in total value (new − current),
+- $T$ = current temperature.
 
-Initially, the algorithm is exploratory (high $ T $), allowing worse solutions to be accepted.  
+Initially, the algorithm is exploratory (high $T$), allowing worse solutions to be accepted.  
 As the temperature decreases, the system becomes more selective, converging toward a stable, high-value configuration.
 
 The **temperature schedule** follows an exponential cooling law:
@@ -75,9 +75,9 @@ T_i = T_0 \left( \frac{T_f}{T_0} \right)^{i / N}
 $$
 
 where:
-- $ T_0 $: initial temperature,  
-- $ T_f $: final temperature,  
-- $ N $: total number of iterations.
+- $T_0$: initial temperature,  
+- $T_f$: final temperature,  
+- $N$: total number of iterations.
 
 ---
 
